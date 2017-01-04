@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/test', function () {
+    //return view('welcome');
+    return \Frontiernxt\Models\Role::all();
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
