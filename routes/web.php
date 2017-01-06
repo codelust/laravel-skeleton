@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Route::get('/test', function () {
     //return view('welcome');
-    return \Frontiernxt\Models\Role::all();
+    return \Frontiernxt\Models\User::all();
 });
 
 Auth::routes();
