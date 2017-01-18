@@ -18,9 +18,9 @@ class CreateRoleUsersTable extends Migration
             $table->integer('user_id');
             $table->integer('role_id');
             $table->integer('subject_id');
-            $table->integer('object_id');
+            $table->integer('object_id')->nullable();
             $table->string('subject_type');
-            $table->string('object_type');
+            $table->string('object_type')->nullable();
             $table->timestamps();
         });
     }
