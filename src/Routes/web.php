@@ -1,5 +1,7 @@
 <?php
 
+use Frontiernxt\Routes\Auth;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +22,8 @@ Route::get('/test', function () {
     return \Frontiernxt\Models\User::all();
 });
 
-Auth::routes();
+$auth_routes = new Auth;
+
+$auth_routes->routes();
 
 Route::get('/home', 'HomeController@index');

@@ -11,9 +11,10 @@ use Frontiernxt\Models\Role;
 use Frontiernxt\Models\RoleUser;
 use Exception;
 
-class CreateSuperAdminUser implements ShouldQueue
+//class CreateSuperAdminUser implements ShouldQueue
+class CreateSuperAdminUser 
 {
-    use InteractsWithQueue, Queueable, SerializesModels;
+//    use InteractsWithQueue, Queueable, SerializesModels;
 
 
     protected $userdata;

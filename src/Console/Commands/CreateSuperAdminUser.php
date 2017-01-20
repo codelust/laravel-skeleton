@@ -6,6 +6,7 @@ use Illuminate\Console\Command;
 use stdclass;
 use exception;
 use Frontiernxt\Jobs\CreateSuperAdminUser as CreateSuperAdmin;
+use Frontiernxt\Models\User;
 
 class CreateSuperAdminUser extends Command
 {
@@ -53,7 +54,17 @@ class CreateSuperAdminUser extends Command
 
         $last_name = $this->ask('What is your last name?');
 
+        email_routine_start:
+
         $email = $this->ask('What is your email?');
+
+        if (User::where('email', $email)->count() > 0)
+        {
+            $this->error("There is already a user with that email ID. Please select a different one");
+
+            goto email_routine_start;
+            
+        }
 
         password_routine_start:
 
@@ -89,12 +100,9 @@ class CreateSuperAdminUser extends Command
             try {
                 
                 
-
                 dispatch(new CreateSuperAdmin($userdata));
 
-                //$this->info('trying dispatch 2');
-                
-                $this->info('User successfully created');
+                $this->info('Admin User successfully created');
 
             } catch (Exception $e) {
                 
