@@ -13,6 +13,9 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:api');
+
+Route::get('user', '\Frontiernxt\Controllers\API\AccountsController@user')->middleware('jwt.refresh');
+
+Route::post('account/create', '\Frontiernxt\Controllers\API\AccountsController@store')->middleware('apiauth');
+
+Route::post('account/authenticate', '\Frontiernxt\Controllers\API\AccountsController@authenticate')->middleware('apiauth');

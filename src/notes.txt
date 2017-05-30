@@ -1,0 +1,145 @@
+users, 
+
+roles, and 
+- id
+- role_name
+eg: is_post_owner
+
+
+role_user. 
+- id
+- user_id
+- role_id
+- subject_id
+- object_id
+- subject_type
+- object_type
+
+
+
+
+The role_user table is derived from the alphabetical order of the related model names, and contains the user_id and role_id columns
+
+
+
+RBAC
+
+rbac
+- id
+- subject_id
+- role_id
+- object
+- subject_type
+- object_type
+
+1 | 223 | is_admin_of_group | 23 | user | group
+
+
+
+
+
+message types
+
+checkin_morning
+
+- How are you doing today?
+    - save sentiment
+    - anything important to note? Highlight calendar stuff.
+    - Suggest a good article to read.
+
+checkin_noon:
+
+
+
+checkin_evening
+
+checkin_custom
+
+
+
+
+
+
+Toolbar
+Description: This is the standard toolbar in Android that is the topmost item on an app.
+Items:
+- Contextual navigation button (back button in inner screens)
+- App/Screen Title
+- Search
+- Settings icon (the three dots)
+Reference: https://guides.codepath.com/android/Using-the-App-Toolbar
+https://material.io/guidelines/components/toolbars.html
+
+
+Tabs
+Description: This provides sub-navigation for each main module like chat. We have to try to limit tabs in each screen to max four and ideally three.
+Reference: https://material.io/guidelines/components/tabs.html
+
+Floating action button
+Description: Floating button that is there across the app that allows users to quickly trigger an action.
+Items: add blog, wire, photo, chat, comment (on individual items))
+Reference: https://material.io/guidelines/components/buttons-floating-action-button.html#buttons-floating-action-button-floating-action-button
+
+Search 
+Description: This belongs on the top bar. The result screen will include search results split by result type (blogs, photos etc.)
+
+Bottom Navigation
+Description: bottom navigation bar: Home, Chat, blogs, events, Photos (with unread items & notification states)
+Reference: https://material.io/guidelines/components/bottom-navigation.html
+
+Add comments
+Like/Unlike
+Share (within the app to a chat contact, copy content text outside it)
+
+
+Navigation Drawer
+Items:
+Directory (search the entire userbase)
+
+https://material.io/guidelines/patterns/navigation-drawer.html#navigation-drawer-specs
+
+
+
+
+Screens:
+#User authentication:
+Login
+Forgot password
+Request registration
+
+#Updates/Home:
+Featured Tab
+All updates tab
+Friends tab
+
+Blogs:
+Featured
+Latest
+Popular
+Friends
+
+Photos:
+Featured
+Latest
+Popular
+Friends
+
+Chat:
+All
+Groups
+
+
+Common elements:
+
+
+
+Req no: SR1702550432
+
+Spalsh Screen
+Login/Logout/Request Password reset
+Chat List
+Public Rooms
+Contacts
+Broadcast messages (this will come in the chat list)
+Video chat
+Image sharing

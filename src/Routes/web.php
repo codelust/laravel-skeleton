@@ -27,3 +27,5 @@ $auth_routes = new Auth;
 $auth_routes->routes();
 
 Route::get('/home', 'HomeController@index');
+
+
